@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  background-color: #fafafa;
+}
+
+.container {
+  margin: auto;
+  max-width: 1440px;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  padding: 48px;
+}
+
+.container header h1 {
+  font-family: "PT Serif", serif;
+  font-size: 3.6rem;
+}
+
+.container header .content {
+  font-size: 1.8rem;
+  max-width: 440px;
+}
+
+.container header .container h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: start;
+  align-items: start;
+}
+
+.member {
+  width: 265px;
+  position: relative;
+}
+img {
+  width: 238px;
+}
+.member:nth-child(3n + 2) {
+  margin-top: 100px;
+}
+
+.member-title {
+  position: absolute;
+  right: 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+  writing-mode: vertical-lr;
+}
+
+.member-name {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+footer {
+  margin-top: 48px;
+  margin-bottom: 24px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  text-align: center;
+  color: #a9a9a9;
+}
+
+footer a {
+  text-decoration: none;
+  color: #a9a9a9;
+}
+
+footer a:hover {
+  color: #000;
+  transition: all 0.3s;
+}
+
+@media (max-width: 800px) {
+  header {
+    flex-direction: column;
+    margin: 0 36px;
+  }
+  header h1 {
+    margin-bottom: 36px;
+  }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 48px;
+  }
+  .member:nth-child(3n + 2) {
+    margin-top: unset;
+  }
+  .member:nth-child(odd) {
+    row-gap: 64px;
+  }
+  .member:nth-child(even) {
+    margin-top: 64px;
+  }
+}
+
+@media (max-width: 475px) {
+  header {
+    margin: 0;
+    padding: 24px;
+  }
+  .content-title {
+    max-width: 333px;
+  }
+  .content-text {
+    max-width: 333px;
+    font-size: 1.4rem;
+  }
+  .gallery {
+    margin-bottom: 24px;
+    padding: 24px;
+  }
+  .member {
+    width: 154px;
+  }
+  .member img {
+    width: 138px;
+  }
+  .member .member-name {
+    font-size: 1.4rem;
+  }
+  .member .member-title {
+    font-size: 1rem;
+  }
+}
